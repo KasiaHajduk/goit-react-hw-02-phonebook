@@ -1,7 +1,10 @@
+import './PhonebookFilter.css';
+
+
 const PhonebookFilter = ({ value, onChange }) => (
-    <label>
+    <label className='pbfilter'>
         Find contacts by name
-        <input type="text" value={value} onChange={onChange} />
+        <input className='pbfilter__input'type="text" value={value} onChange={onChange} />
     </label>
 );
 

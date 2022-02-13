@@ -1,13 +1,10 @@
+import './PhonebookList.css';
 
-function PhonebookElement (props, onDeleteContact) {
-    const contact = props.contact; 
-    
-    return (
-        <li key={contact.id} className='PbList__item'>
-            <p className='PbList__text'>{contact.name} - {contact.number}</p>
-            <button onClick={() => onDeleteContact(contact.id)}>Delete</button>
-        </li>
-    )
-};
+const PhonebookElement = ({id, name, number, onDeleteContact}) => (
+    <li key={id} className='pblist__item'>
+        <p className='pblist__text'> * {name} &nbsp;&nbsp;&nbsp;&nbsp; {number}  </p>
+        <button onClick={() => onDeleteContact(id)}>Delete</button>
+    </li>
+);
 
 export default PhonebookElement;

@@ -28,9 +28,10 @@ export default class PhonebookEditor extends Component {
 
     render (){
         return(
-            <form onSubmit = {this.handleSubmit}>
-                <label> Name
+            <form className="pb__form" onSubmit = {this.handleSubmit}>
+                <label className='pb__label'> Name
                     <input
+                        className="pb__input"
                         value={this.state.name}
                         onChange={this.handleChange} 
                         type="text"
@@ -41,8 +42,9 @@ export default class PhonebookEditor extends Component {
                     />
                 </label>
 
-                <label> Number
+                <label className="pb__label"> Number
                     <input
+                        className="pb__input"
                         value={this.state.number}
                         onChange={this.handleChange}
                         type="tel"
@@ -52,7 +54,7 @@ export default class PhonebookEditor extends Component {
                         required
                     />
                 </label>
-                <button type="submit">
+                <button type="submit" className="pb__add">
                     Add contact
                 </button>
             </form>

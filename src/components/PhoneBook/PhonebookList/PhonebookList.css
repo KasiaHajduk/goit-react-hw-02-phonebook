@@ -1,20 +1,19 @@
-.PbList {
-    width: 600px;
-    padding: 0;
-    margin-top: 20px;
-  }
+.pblist {
+  list-style: inside;
+  padding: 10px;
+  margin: 20px;
+}
   
-  .PbList__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    border: 1px solid black;
-  }
+.pblist__item {
+  display: flex;
+  margin: 5px;
+  list-style: inside;
+
+}
   
-  .PbList__text {
+  .pblist__text {
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: 10px;
+    margin-right: 30px;
   }
   

@@ -1,6 +1,8 @@
 import {Component} from 'react';
 import {nanoid} from 'nanoid';
 
+import './Phonebook.css';
+
 import PhonebookList from './PhoneBook/PhonebookList/PhonebookList';
 import PhonebookEditor from './PhoneBook/PhonebookEditor/PhonebookEditor';
 import PhonebookFilter from './PhoneBook/PhonebookFilter/PhonebookFilter';
@@ -20,9 +22,9 @@ export default class PhoneBook extends Component{
     addContact = ({name, number}) => {
         const contact = {id: nanoid(), name, number};
         const {contacts} = this.state;
-        const anyContact = contacts.filter(contact => contact.name.toLowerCase().includes(name.toLowerCase()));
+        const anyContact = contacts.some(contact => contact.name.toLowerCase() === (name.toLowerCase()));
    
-        if (anyContact.length) {
+        if (anyContact) {
             alert(`${name} is already in contacts`);    
         }
         else {
@@ -63,7 +65,6 @@ export default class PhoneBook extends Component{
             <PhonebookFilter value={filter} onChange={this.changeFilter} />
             <PhonebookList 
                 contacts={visibleContacts} 
-                filter={filter} 
                 onDeleteContact={this.deleteContact}/>
         </div>
         );
