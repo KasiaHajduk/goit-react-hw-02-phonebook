@@ -19,7 +19,7 @@ export default class PhonebookEditor extends Component {
     //wywoływny jest przy wysyłaniu formularza
     handleSubmit = e => {
         e.preventDefault();
-        const {name, number} = this.state;
+        //const {name, number} = this.state;
 
         //Props, który przekazywany jest do formularza do wywołania przy submicie
         this.props.onSubmit ({ ...this.state});
